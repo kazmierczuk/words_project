@@ -1,4 +1,22 @@
 {% extends 'matrix/base.html' %}
 {% block trinity %}
-<h1>Results</h1>
+  <h1>Results</h1>
+
+  <div class="container">
+    <table class="table">
+      <thead>
+        <th>Word</th>
+        <th>Short Definition</th>
+        <th>Long Definition</th>
+      </thead>
+      {% for obj in definitions %}
+        <tr class="success" >
+          <td>{{ obj.word }}</td>
+          <td>{{ obj.short_def }}</td>
+          <td>{{ obj.long_def }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+  </div>
+
 {% endblock %}
